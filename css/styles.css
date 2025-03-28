@@ -142,6 +142,12 @@ li:hover {
   flex-direction: column;
   align-items: center;
   margin-top: 5vh;
+
+  h1 {
+    margin-left: 2.5vw;
+    /* text-align: left; */
+    align-self: flex-start;
+  }
 }
 
 .cards-content {
@@ -215,7 +221,7 @@ span {
 }
 
 .contact-form-container {
-  width: 60%;
+  width: 85vw;
   display: flex;
   justify-self: center;
   flex-direction: column;
@@ -227,7 +233,7 @@ span {
     padding: 3% 3%;
     border-radius: 10px;
     background-color: #202020;
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
@@ -323,11 +329,11 @@ span {
 
   .cards-content {
     grid-template-columns: 1fr;
-    margin-top: 5vh;
+    margin-top: 2vh;
   }
 
   .contact-form-container {
-    width: 75vw;
+    width: 90vw;
 
     .contact-form {
       padding: 8% 6%;
