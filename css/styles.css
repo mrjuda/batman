@@ -80,7 +80,7 @@ li:hover {
 }
 
 #trailer-container {
-  width: 95vw;
+  width: 90vw;
   /* height: 400px; */
   display: flex;
   justify-self: center;
@@ -91,7 +91,8 @@ li:hover {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-around; */
+    padding: 0 2vw;
   
     .trailer {
       width: 50%;
@@ -103,14 +104,13 @@ li:hover {
       flex-direction: column;
       justify-content: space-between;
       text-align: justify;
-      /* padding: 0 5vw; */
-      /* margin-left: 30px; */
     
       .description {
         color:#ffffff;
         font-size: 19px;
         font-family: "Archivo Narrow", Helvetica, Arial, sans-serif;
-        width: 100%; 
+        width: 95%;
+        padding-left: 2vw;
       }
     }
   }
@@ -142,7 +142,7 @@ li:hover {
 }
 
 .portfolio-container {
-  width: 95vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -362,8 +362,11 @@ span {
         /* display: flex; */
         /* flex-direction: column; */
         /* justify-content: space-between; */
+        text-align: justify;
+        width: 100%;
     
         .description {
+          text-align: justify;
           width: 100vw;
         }
       
