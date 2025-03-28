@@ -3,21 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Batman - Contact</title>
+  <title>JudaLabs - Contact</title>
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
   <header>
-    <img id="logo" src="../media/icons/batman_logo_black.png" />
+    <img id="logo" src="../media/icons/logo.png" />
     <nav class="site-menu">
       <ul class="site-menu">
         <a href="../index.html"> <li>Home</li> </a>
         <a href="./contact.html"> <li>Contact</li> </a>
-        <a href="./photos.html"> <li>Photos</li> </a>
+        <a href="./portfolio.html"> <li>Portfolio</li> </a>
         <a href="./comments.html"> <li>Comments</li> </a>
       </ul>
     </nav>
   </header>
+
+  <div class="form contact-form-container">
+    <h1>JudaLabs - Contact</h1>
+    <form acion="./index.html" class="contact-form">
+      <div class="form-item">
+        <label for="email"><span>Email</span></label>
+        <div class="input-field">
+          <input  id="email" type="email" name="email" placeholder="Insert a valid email" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label for="password"><span>Password</span></label>
+        <div class="input-field">
+          <input id="password" type="password" name="password" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <span>Gender</span>
+        <div class="input-field">
+          <div class="form-sub-item"><label for="radio">Male</label><input id="radio" type="radio" name="Gender" value="Male" /></div>
+          <div class="form-sub-item"><label for="radio">Female</label><input id="radio" type="radio" name="Gender" value="Female" /></div>
+          <div class="form-sub-item"><label for="radio">Other</label><input id="radio" type="radio" name="Gender" value="Other" /></div>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label for="range"><span>Range</span></label>
+        <div class="input-field">
+          <input id="range" type="range" name="range" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label for="file"><span>File</span></label>
+        <div class="input-field">
+          <input id="file" type="file" name="file" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label for="date"><span>Date</span></label>
+        <div class="input-field">
+          <input id="date" type="date" name="date" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <span>Week-day</span>
+        <div class="input-field">
+          <select name="Week Day" id="weekday">
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <span>Message</span>
+        <div class="input-field">
+          <textarea name="message" id="message" rows="10"></textarea>
+        </div>
+      </div>
+
+      <button class="btn-red">Send</button>
+
+    </form>
+  </div>
+
+  <footer>
+    <img style="object-fit: contain;" id="logo" src="../media/icons/logo.png" />
+    <span>© 2025 JudaLabs</span>
+    <span>All Rights Reserved</span>
+    
+    <nav class="footer-navigation">
+      <ul class="footer-list">
+        <a href="../index.html"> <li>Home</li> </a>
+        <a href="./contact.html"> <li>Contact</li> </a>
+        <a href="./portfolio.html"> <li>Portfolio</li> </a>
+        <a href="./comments.html"> <li>Comments</li> </a>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 </html>

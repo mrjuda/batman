@@ -3,10 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Kdam+Thmor+Pro&display=swap');
 
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
-  background-color: #000000;
   color: #ffffff;
   text-decoration: none;
   list-style-type: none;
@@ -14,11 +22,25 @@
   font-family: "Archivo Narrow", Helvetica, Arial, sans-serif;
 }
 
+.glow {
+  /* font-size: 80px; */
+  color: #ffffff;
+  /* text-align: center; */
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+body {
+  background-color: #000000;
+}
+
 header {
-  height: 90px;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* background-color: #000000; */
 }
 
 nav {
@@ -45,12 +67,12 @@ li:hover {
 }
 
 #logo {
-  width: 150px;
+  width: 80px;
   height: auto;
 }
 
 #banner {
-  background-image: url('../media/images/batman_banner.jpg');
+  background-image: url('../media/images/banner.jpg');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
@@ -58,39 +80,39 @@ li:hover {
 }
 
 #trailer-container {
-  width: 100%;
+  width: 90%;
   height: 400px;
   display: flex;
   justify-content: center;
+
+  .content {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .trailer {
+      width: 50%;
+    }
+
+    #synopsis {
+      /* width: 50%; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 30px;
+    
+      .description {
+        color:#ffffff;
+        font-size: 19px;
+        font-family: "Archivo Narrow", Helvetica, Arial, sans-serif;
+        width: 100%; 
+      }
+    }
+  }
 }
 
-.content {
-  width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.trailer {
-  width: 50%;
-}
-
-#synopsis {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 30px;
-}
-
-.description {
-  color:#ffffff;
-  font-size: 19px;
-  font-family: "Archivo Narrow", Helvetica, Arial, sans-serif;
-  width: 70%; 
-}
-
-.btn-tickets {
+.btn-red {
   width: 200px;
   height: 60px;
   background-color: #d21617;
@@ -109,20 +131,37 @@ li:hover {
   margin-top: 25px;
 }
 
-.btn-tickets:hover {
+.btn-red:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
+
 .actor-cards-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 5vh;
+}
+
+.portfolio-container {
+  width: 100%;
+  padding: 3vh 2vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-self: center;
+  margin-top: 5vh;
+/* 
+  h1 {
+    padding: 2vw 3vw;
+  } */
 }
 
 .cards-content {
-  width: 90%;
+  width: 95%;
+  /* padding: 0 2vw; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
@@ -163,8 +202,8 @@ li:hover {
 }
 
 footer {
-  height: 300px;
-  margin-top: 50px;
+  height: 140px;
+  margin: 50px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,11 +225,68 @@ span {
   align-items: center;
 }
 
-/* MEDIA QUERY */
+.contact-form-container {
+  width: 60%;
+  display: flex;
+  /* align-self: center; */
+  justify-self: center;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* justify-items: center; */
+
+  h1 {
+    margin: 5% 0;
+  }
+  .contact-form {
+    padding: 3% 3%;
+    border-radius: 10px;
+    background-color: #202020;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    row-gap: 20px;
+
+    .form-item {
+      display: flex;
+      justify-content: space-between;
+      
+      span {
+        width: 30%;
+      }
+
+      .input-field {
+        height: 40px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        .select, textarea, input, #weekday {
+          width: 100%;
+          background-color: #000000;
+          color: #ffffff;
+        }
+      }
+    }
+    #weekday {
+      height: 40px;
+      
+    }
+  }
+}
+
+/* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
+/* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
+/* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
+/* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
 
 @media(max-width: 768px){
   .footer-navigation {
     display: block;
+    margin: 20px 0;
+    /* margin-bottom: 20px; */
+    padding: 20px 0;
   }
 
   nav {
@@ -199,6 +295,8 @@ span {
 
   #banner {
     background-position: 40%;
+    height: 25vh;
+    margin-bottom: 15vh;
   }
 
   #trailer-container {
@@ -208,37 +306,48 @@ span {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-  }
 
-  .content {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    .content {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .trailer {
+        width: 100%;
+      }
 
-  .trailer {
-    width: 100%;
-  }
+      .synopsis {
+        /* width: 100%; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+    
+        .description {
+          width: 100vw;
+        }
+      
+        .btn-tickets {
+          width: 50%;
+          margin-top: 30px;
+        }
+      }
+    }
 
-  .synopsis {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .description {
-    width: 100%;
-  }
-
-  .btn-tickets {
-    width: 100%;
-    margin-top: 30px;
   }
 
   .cards-content {
     grid-template-columns: 1fr;
-    margin-top: 150px;
+    margin-top: 5vh;
+  }
+
+  .contact-form-container {
+    width: 75vw;
+
+    .contact-form {
+      padding: 8% 6%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
