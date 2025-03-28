@@ -237,7 +237,6 @@ span {
     padding: 3% 3%;
     border-radius: 10px;
     background-color: #202020;
-    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
@@ -267,6 +266,51 @@ span {
     #weekday {
       height: 40px;
       
+    }
+  }
+
+  .comment-form {
+    padding: 3% 3%;
+    border-radius: 10px;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+
+    .form-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 1vh 0;
+      
+      span {
+        width: 30%;
+      }
+
+      .comment-message {
+        height: 20vh;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        .select, textarea, input {
+          width: 100%;
+          background-color: #000000;
+          color: #ffffff;
+        }
+      }
+
+      .comment-email {
+        height: 5vh;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        .select, textarea, input {
+          width: 100%;
+          background-color: #000000;
+          color: #ffffff;
+        }
+      }
     }
   }
 }
