@@ -17,4 +17,4 @@
 - LinkedIn: [@judateixeira](https://www.linkedin.com/in/judateixeira "Judá Teixeira's Linkedin profile")
 
 ## 📝License
-This project is [MIT](https://github.com/mrjuda/jt-m1-capstone/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/mrjuda/batman/blob/main/LICENSE) licensed.
